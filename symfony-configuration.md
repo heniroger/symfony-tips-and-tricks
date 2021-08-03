@@ -1,6 +1,7 @@
-# Symfony Tips and Tricks
+# Symfony Tips and Tricks V5.3
 
 ## Symfony Installation and configuration
+https://symfony.com/doc/current/setup.html
 
 ### Symfony Installation
 ```bash
