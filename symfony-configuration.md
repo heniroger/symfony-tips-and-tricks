@@ -152,4 +152,58 @@ body {
 }
 
 ```
-### 
+
+## Enabling React.js
+
+### Install react dependencies
+```bash
+$ yarn add react react-dom prop-types
+```
+### Enable react in your webpack.config.js:
+```js
+  // webpack.config.js
+  // ...
+
+  Encore
+      // ...
++     .enableReactPreset()
+  ;
+```
+## Configure SplitChunck
+It prevent your file to become larger,if you're using multiple jquery script and need separate code. See https://symfony.com/doc/current/frontend/encore/split-chunks.html
+### Add .splitEntryChunks() in  webpack.config.js
+```js
+  // webpack.config.js
+  Encore
+      // ...
+
+      // multiple entry files, which probably import the same code
+      .addEntry('app', './assets/app.js')
+      .addEntry('homepage', './assets/homepage.js')
+      .addEntry('blog', './assets/blog.js')
+      .addEntry('store', './assets/store.js')
+
++     .splitEntryChunks()
+```
+### If you are using twig, comment few lines
+```js
+{#
+    May now render multiple script tags:
+        <script src="/build/runtime.js" defer></script>
+        <script src="/build/vendors-node_modules_jquery_dist_jquery_js.js" defer></script>
+        <script src="/build/homepage.js" defer></script>
+#}
+{{ encore_entry_script_tags('homepage') }}
+```
+### Controlling how Assets are Split
+```js
+  // webpack.config.js
+  Encore
+      // ...
+
+      .splitEntryChunks()
++     .configureSplitChunks(function(splitChunks) {
++         // change the configuration
++         splitChunks.minSize = 0;
++     })
+```
