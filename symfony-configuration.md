@@ -207,3 +207,38 @@ It prevent your file to become larger,if you're using multiple jquery script and
 +         splitChunks.minSize = 0;
 +     })
 ```
+## Asset Versioning
+For details, see: https://symfony.com/doc/current/frontend/encore/versioning.html
+```js
+// webpack.config.js
+
+  // ...
+  Encore
+      .setOutputPath('public/build/')
+      // ...
++     .enableVersioning()
+```
+### Loading Assets from entrypoints.json & manifest.json
+```json
+{
+    "build/app.js": "/build/app.123abc.js",
+    "build/dashboard.css": "/build/dashboard.a4bf2d.css",
+    "build/images/logo.png": "/build/images/logo.3eed42.png"
+}
+
+```
+
+### If you’re using Symfony, just activate the json_manifest_file versioning strategy:
+
+```yaml
+# this file is added automatically when installing Encore with Symfony Flex
+# config/packages/assets.yaml
+framework:
+    assets:
+        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
+```
+###  Be sure to wrap each path in the Twig asset() function like normal
+```html
+<img src="{{ asset('build/images/logo.png') }}" alt="ACME logo">
+
+```
