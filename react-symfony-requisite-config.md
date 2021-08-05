@@ -46,6 +46,23 @@ $ npm install --save-dev @babel/preset-flow
 $ npm install --save-dev @babel/preset-typescript
 
 ```
+##  Create React App project with TypeScript
 ```bash
-$ 
+$ npx create-react-app my-app --template typescript
+
+# or
+
+$ yarn create react-app my-app --template typescript
+```
+
+
+## To add TypeScript to an existing Create React App project, first install it
+```bash
+
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+# or
+
+yarn add typescript @types/node @types/react @types/react-dom @types/jest
+
 ```
