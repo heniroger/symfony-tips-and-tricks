@@ -23,7 +23,7 @@ $ nvm install 16.6.1
 $ npm install --global yarn
 ```
 
-## Using nvm
+### Using nvm
 ```bash
 # You can use the following command to list installed version’s of Node for the current user.
 $ nvm ls 
@@ -33,4 +33,19 @@ $ nvm ls-remote
 $ nvm use 16.6.1 
 # To find the default Node version set for the current user, type:
 $ nvm run default --version 
+```
+## Setup Babel
+- Install React preset
+```bash
+$ npm install --save-dev @babel/preset-react
+```
+and add @babel/preset-react to your Babel configuration.
+- Install Flow and Type script annotation :
+```bash
+$ npm install --save-dev @babel/preset-flow
+$ npm install --save-dev @babel/preset-typescript
+
+```
+```bash
+$ 
 ```
