@@ -31,7 +31,7 @@ $ php bin/console about
 
 ### Run project
 
-```
+```bash
 $ php bin/console server:start
 # or install symfony cli
 $ sudo wget https://get.symfony.com/cli/installer -O - | bash
