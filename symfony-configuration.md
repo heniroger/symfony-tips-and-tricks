@@ -33,6 +33,11 @@ $ php bin/console about
 
 ```
 $ php bin/console server:start
+# or install symfony cli
+$ sudo wget https://get.symfony.com/cli/installer -O - | bash
+$ sudo cp /home/raheny/.symfony/bin/symfony /usr/local/bin/symfony
+# and run server
+$ symfony server:start
 ```
 
 ## Installing Encore
