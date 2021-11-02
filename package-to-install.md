@@ -1,5 +1,5 @@
 Install react in symfony
-
+```
 $ composer require symfony/webpack-encore-bundle
 
 $ yarn encore dev-server
@@ -20,9 +20,9 @@ $ yarn add node-sass
 
 
 $ yarn add @fortawesome/fontawesome-free
-  yarn add @fortawesome/fontawesome-svg-core
-  yarn add @fortawesome/free-solid-svg-icons
-  yarn add @fortawesome/react-fontawesome
+$ yarn add @fortawesome/fontawesome-svg-core
+$ yarn add @fortawesome/free-solid-svg-icons
+$ yarn add @fortawesome/react-fontawesome
 
 $ yarn add typescript ts-loader
 $  yarn add typescript @types/node @types/react @types/react-dom @types/jest @types/react-router-dom
@@ -33,3 +33,4 @@ $ yarn add @types/react-redux
 $ symfony server:start
 $ yarn encore dev --watch
 
+```
