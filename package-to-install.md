@@ -18,6 +18,10 @@ $  yarn add sass-loader@^12.0.0 sass --dev
 $ yarn add bootstrap@5 jquery popper.js bs-custom-file-input --dev
 $ yarn add node-sass
 
+$ yarn add @popperjs/core
+$ yarn add @types/jquery
+$ yarn add popper.js
+
 
 $ yarn add @fortawesome/fontawesome-free
 $ yarn add @fortawesome/fontawesome-svg-core
