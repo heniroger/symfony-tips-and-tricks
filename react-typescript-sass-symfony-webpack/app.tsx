@@ -23,7 +23,11 @@ import '@fortawesome/fontawesome-free/js/brands'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import * as  $ from 'jquery';
+import 'jquery/dist/jquery.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import HelloWorld from './HelloWorld';
 
 //ReactDOM.render(<BrowserRouter><HelloWorld /></BrowserRouter>, document.querySelector('#root'));
+
 
